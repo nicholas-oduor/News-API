@@ -1,7 +1,9 @@
 class Source:
+    
     '''
     News class to define News Source Objects
     '''
+    all_source = []
 
     def __init__(self,title,image,description,date,article):
         self.title = title
@@ -9,6 +11,15 @@ class Source:
         self.description = description
         self.date = date
         self.article = article
+
+    def save_source(self):
+        Source.all_source.append(self)
+
+    @classmethod
+    def clear_articles(cls):
+        article.all_articles.clear()
+        
+
 class Article:
 
     all_articles = []
