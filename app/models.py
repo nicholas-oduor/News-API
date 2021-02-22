@@ -15,3 +15,14 @@ class Article:
     @classmethod
     def clear_articles(cls):
         article.all_articles.clear()
+    
+    @classmethod
+    def get_articles(cls,title):
+
+        response = []
+
+        for article in cls.all_articles:
+            if article.title == title:
+                response.append(article)
+
+        return response
