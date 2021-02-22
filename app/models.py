@@ -8,3 +8,6 @@ class Article:
         self.description = description
         self.date = date
         self.article = article
+
+    def save_article(self):
+        Article.all_articles.append(self)
