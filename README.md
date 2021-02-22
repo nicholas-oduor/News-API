@@ -7,3 +7,6 @@ News articles is an application that gives a list and preview of news articles f
 </td>
 </tr>
 </table>
+
+## Demo
+Here is a working live demo : https://nicholas-news.herokuapp.com/
