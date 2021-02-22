@@ -29,4 +29,27 @@ def get_news(source):
 
 
     return news_results
-    
+
+def process_results(news_list):
+    '''
+    Function  that processes the news result and transform them to a list of Objects
+
+    Args:
+        news_list: A list of dictionaries that contain news details
+
+    Returns :
+        news_results: A list of news objects
+    '''
+    news_results = []
+    for news_item in news_list:
+        title = news_item.get('title')
+        image = news_item.get('urlToImage')
+        description = news_item.get('description')
+        date = news_item.get('publishedAt')
+        article = news_item.get('url')
+
+        if image:
+            news_object = News(title,image,description,date,article)
+            news_results.append(news_object)
+
+    return news_results    
