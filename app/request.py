@@ -49,7 +49,7 @@ def process_results(news_list):
         article = news_item.get('url')
 
         if image:
-            news_object = News(title,image,description,date,article)
+            news_object = Source(title,image,description,date,article)
             news_results.append(news_object)
 
     return news_results   
