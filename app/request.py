@@ -71,3 +71,18 @@ def get_article(article):
             news_object = News(title,image,description,date,article)
 
     return news_object 
+
+def get_category(category_name):
+    get_category_url = base_url.format(category_name,api_key)
+
+    with urllib.request.urlopen(get_category_url) as url:
+        get_category_data = url.read()
+        get_category_response = json.loads(get_category_data)
+
+        get_category_results = None
+
+        if get_category_response['articles']:
+            get_category_list = get_category_response['articles']
+            get_category_results = process_results(get_category_list)
+          
+    return get_category_results
