@@ -16,8 +16,19 @@ class Source:
         Source.all_source.append(self)
 
     @classmethod
-    def clear_articles(cls):
-        article.all_articles.clear()
+    def clear_source(cls):
+        Source.sources.clear()
+
+    @classmethod
+    def get_source(cls,title):
+
+        response = []
+
+        for source in cls.all_source:
+            if source.title == title:
+                response.append(source)
+
+        return response
         
 
 class Article:
