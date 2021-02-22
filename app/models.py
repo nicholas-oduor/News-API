@@ -17,7 +17,7 @@ class Source:
 
     @classmethod
     def clear_source(cls):
-        Source.sources.clear()
+        Source.all_source.clear()
 
     @classmethod
     def get_source(cls,title):
