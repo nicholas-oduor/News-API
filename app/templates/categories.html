@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macro%}
+
+
+{% block content %}
+<h1 class="text-capitalize text-center">{{title}} NEWS</h3>
+
+<div class="container-fluid">
+  <div class="row">
+    {{ macro.displayNewsList(technology)}}
+  </div>
+
+  <div class="row">
+    {{ macro.displayNewsList(sports)}}
+  </div>
+
+  <div class="row">
+    {{ macro.displayNewsList(business)}}
+  </div>
+</div>
+{% endblock %}
